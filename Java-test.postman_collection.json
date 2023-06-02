@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "aea057db-e3c7-459f-85e6-bf3040d37536",
+		"name": "Java-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20109406"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by type, case: computer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/type?name=computer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"type"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "computer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by type, case: laptop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/type?name=laptop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"type"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "laptop"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by type, case: screen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/type?name=screen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"type"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "screen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by type, case: harddrive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/type?name=harddrive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"type"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "harddrive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save, case: laptop",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\" : \"1111\",\r\n    \"companyName\" : \"Samsung\",\r\n    \"price\" : \"999.9\",\r\n    \"numberOfItems\": 4,\r\n    \"deviceType\" : \"laptop\",\r\n    \"size\" : \"SIZE_14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save, case: computer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\" : \"2111\",\r\n    \"companyName\" : \"Samsung\",\r\n    \"price\" : \"999.9\",\r\n    \"numberOfItems\": 4,\r\n    \"deviceType\" : \"computer\",\r\n    \"type\" : \"DESKTOP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save, case: screen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\" : \"3111\",\r\n    \"companyName\" : \"Samsung\",\r\n    \"price\" : \"999.9\",\r\n    \"numberOfItems\": 4,\r\n    \"deviceType\" : \"screen\",\r\n    \"diagonalSize\" : 52\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save, case: harddrive",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\" : \"4111\",\r\n    \"companyName\" : \"Samsung\",\r\n    \"price\" : \"999.9\",\r\n    \"numberOfItems\": 4,\r\n    \"deviceType\" : \"harddrive\",\r\n    \"capacity\" : 128\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"serialNumber\" : \"1111\",\r\n    \"companyName\" : \"Samsung\",\r\n    \"price\" : \"999.9\",\r\n    \"numberOfItems\": 4,\r\n    \"deviceType\" : \"laptop\",\r\n    \"size\" : \"SIZE_14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
